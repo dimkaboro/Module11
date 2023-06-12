@@ -6,9 +6,9 @@ import java.util.stream.Stream;
 public class Main {
     public static void main(String[] args) {
         // Exercise1
-//        List<String> names = Arrays.asList("Ivan", "Peter", "Dmytro", "Oleksandr", "Ksenia", "Anastasia", "Bohdan");
-//        String formattedName = Exercise1.formatNames(names);
-//        System.out.println(formattedName);
+        List<String> names = Arrays.asList("Ivan", "Peter", "Dmytro", "Oleksandr", "Ksenia", "Anastasia", "Bohdan");
+        String formattedName = Exercise1.formatNames(names);
+        System.out.println(formattedName);
 //
 //        // Exercise2
 //        final List<String> input = Arrays.asList("Ivan", "Peter", "Dmytro", "Oleksandr", "Ksenia", "Anastasia", "Bohdan");

@@ -1,20 +1,12 @@
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Exercise1 {
     public static String formatNames(List<String> names) {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < names.size(); i++) {
-            if(i % 2 == 0) {
-                int index = i + 1;
-                String name = names.get(i);
-                stringBuilder.append(index).append(".").append(name);
-                if(i < names.size() - 1) {
-                    stringBuilder.append(", ");
-                } else if(i == names.size() - 1) {
-                    stringBuilder.append(". ");
-                }
-            }
-        }
-        return stringBuilder.toString();
+       return IntStream.range(0, names.size())
+               .filter(i -> i % 2 == 0)
+               .mapToObj(i -> (i + 1) + ". " + names.get(i))
+               .collect(Collectors.joining(", "));
     }
 }
